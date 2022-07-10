@@ -78,8 +78,9 @@ img {
 }
 
 .site-nav .item {
-    margin-right: 50px;
     position: relative;
+    margin-right: 50px;
+    
 }
 
 .site-nav .item:last-child{
@@ -97,6 +98,8 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav a:hover,
@@ -118,7 +121,6 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-color);
-
 }
 
 .contact {
@@ -141,6 +143,8 @@ img {
     letter-spacing: 0.02em;
     text-decoration: none;
     align-items: center;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-icon {
@@ -243,6 +247,8 @@ img {
     border-radius: 4px;
     border: 1px solid #F5F4FA;
     cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -448,11 +454,15 @@ section {
     justify-content: center;
     background-color: #FFFFFF;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: pointer;   
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
     fill: #AFB1B8;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-link:hover {
@@ -489,6 +499,9 @@ section {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     background-color: #FFFFFF;
+
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list:last-child {
@@ -505,6 +518,8 @@ section {
 
 .client-icon {
     fill: #AFB1B8;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover .client-icon{
@@ -541,6 +556,8 @@ section {
 .content-link {
     text-decoration: none;
     display: block;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .thumb {
@@ -556,7 +573,6 @@ section {
     padding: 63px 24px;
     display: flex;
     align-items:  center;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin: 0 0;
     color: #FFFFFF;
     font-weight: 400;
@@ -564,9 +580,10 @@ section {
     line-height: 1.56;
     letter-spacing: 0.03em;
     background-color: rgba(33, 150, 243, 0.9);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     transform: translateY(100%);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-info {
@@ -652,6 +669,8 @@ section {
     font-size: 14px;
     line-height: 1.71;
     text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact:hover {
@@ -695,6 +714,8 @@ section {
     justify-content: center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-list:last-child {
@@ -720,6 +741,9 @@ section {
     width:100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -727,11 +751,17 @@ section {
     pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 528px;
     height: 581px;
     background-color: #fff;
@@ -753,9 +783,9 @@ section {
     background-color: #FFFFFF;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 .icon-close-window {
     fill: #000008;
 }
-
 
